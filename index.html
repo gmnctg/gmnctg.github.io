@@ -325,6 +325,43 @@
 }
 .gallery-nav button:hover { background: var(--fog-2); }
 
+ /* ═══════════ CONTACT ═══════════ */
+  .contact-section { background: linear-gradient(150deg, var(--sage-deep), var(--sage-mid)); color: #fff; }
+  .contact-inner { max-width: 1040px; margin: 0 auto; padding: 4.5rem 2rem; }
+  .contact-heading { font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 500; margin-bottom: .8rem; }
+  .contact-sub { color: rgba(255,255,255,.7); max-width: 56ch; margin-bottom: 2.6rem; }
+  .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-bottom: 2.4rem; }
+  @media (max-width: 780px) { .contact-grid { grid-template-columns: 1fr; } }
+  .contact-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: var(--rl); padding: 1.5rem; transition: transform .18s, border-color .18s, background .18s; }
+  .contact-card:hover { transform: translateY(-3px); border-color: rgba(185,143,85,.55); background: rgba(255,255,255,.09); }
+  .contact-card-icon { width: 34px; height: 34px; color: var(--sand); margin-bottom: .9rem; }
+  .contact-card-icon svg { width: 100%; height: 100%; }
+  .contact-card-label { font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color: rgba(255,255,255,.55); margin-bottom: .4rem; }
+  .contact-card-value { font-size: 14.5px; line-height: 1.6; }
+  .contact-card-value a { text-decoration: none; }
+  .contact-card-value a:hover { color: var(--sand); }
+
+  /* availability tags + CTA row */
+  .availability-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.8rem; }
+  .availability-tag {
+    display: inline-flex; align-items: center; gap: .45rem;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .05em; text-transform: uppercase;
+    color: rgba(255,255,255,.85); background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.16); border-radius: 999px; padding: .4rem .85rem;
+  }
+  .availability-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--sand); flex-shrink: 0; }
+  .contact-actions { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: 2.6rem; }
+  .social-row { display: flex; flex-wrap: wrap; gap: .9rem; align-items: center; }
+  .social-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: #fff; border: 1px solid rgba(255,255,255,.25);
+    box-shadow: var(--shadow-sm);
+    transition: transform .18s, box-shadow .18s, border-color .18s;
+  }
+  .social-icon img { width: 26px; height: 26px; object-fit: contain; display: block; }
+  .social-icon:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--sand); }
+
  /* ======================================================
    CONTACT SECTION — LINKEDIN PROFILE LAYOUT
 ====================================================== */
@@ -435,7 +472,7 @@
 
 
 /* ======================================================
-   LINKEDIN OFFICIAL BADGE
+   LINKEDIN PROFILE SUMMARY
 ====================================================== */
 
 .linkedin-badge-wrapper {
@@ -1180,6 +1217,17 @@
       collaborations in bio-inspired optimisation and autonomous UAV systems.
     </p>
 
+    <div class="availability-row">
+      <span class="availability-tag">Postdoctoral Positions</span>
+      <span class="availability-tag">Faculty Appointments</span>
+      <span class="availability-tag">Research Collaboration</span>
+    </div>
+
+    <div class="contact-actions">
+      <a href="mailto:gmn.ctg@gmail.com" class="btn btn-primary">Email Me</a>
+      <a href="https://www.linkedin.com/in/gmnctg/" target="_blank" rel="noopener" class="btn btn-ghost">Connect on LinkedIn</a>
+    </div>
+
 
     <!-- CONTACT + LINKEDIN TWO-COLUMN AREA -->
     <div class="contact-main-grid">
@@ -1296,12 +1344,12 @@
             class="badge-base LI-profile-badge"
             data-locale="en_US"
             data-size="medium"
-            data-theme="dark"
+            data-theme="light"
             data-type="VERTICAL"
             data-vanity="gmnctg"
             data-version="v1"
           >
-            <a
+            
               class="badge-base__link LI-simple-link"
               href="https://bd.linkedin.com/in/gmnctg?trk=profile-badge"
               target="_blank"
@@ -1322,7 +1370,7 @@
     <div class="social-row">
 
       <!-- GOOGLE SCHOLAR -->
-      <a
+      
         href="https://scholar.google.com/citations?user=vpEA8RwAAAAJ&hl=en"
         target="_blank"
         rel="noopener"
@@ -1338,7 +1386,7 @@
 
 
       <!-- ORCID -->
-      <a
+      
         href="https://orcid.org/0000-0003-3375-0927"
         target="_blank"
         rel="noopener"
@@ -1354,7 +1402,7 @@
 
 
       <!-- LINKEDIN -->
-      <a
+      
         href="https://www.linkedin.com/in/gmnctg/"
         target="_blank"
         rel="noopener"
@@ -1370,7 +1418,7 @@
 
 
       <!-- RESEARCHGATE -->
-      <a
+      
         href="https://www.researchgate.net/"
         target="_blank"
         rel="noopener"
@@ -1388,62 +1436,6 @@
 
   </div>
 </section>
-
-
-<!-- FOOTER -->
-<footer>
-  <p>
-    Dr. Golam Moktader Nayeem
-    &nbsp;·&nbsp;
-    Cumilla, Bangladesh
-  </p>
-</footer>
-
-
-<!-- YOUR EXISTING SCRIPT -->
-<script>
-  const toggle = document.getElementById('nav-toggle');
-  const links  = document.getElementById('nav-links');
-
-  toggle.addEventListener('click', () => {
-    links.classList.toggle('open');
-  });
-
-
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-
-    a.addEventListener('click', e => {
-
-      const target = document.querySelector(
-        a.getAttribute('href')
-      );
-
-      if (target) {
-
-        e.preventDefault();
-
-        links.classList.remove('open');
-
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-
-      }
-
-    });
-
-  });
-</script>
-
-
-<!-- LINKEDIN OFFICIAL PROFILE BADGE SCRIPT -->
-<script
-  src="https://platform.linkedin.com/badges/js/profile.js"
-  async
-  defer
-  type="text/javascript">
-</script>
 
  
 </body>
