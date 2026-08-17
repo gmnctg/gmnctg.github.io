@@ -374,13 +374,54 @@
 }
 
 .contact-col-left {
+  flex: 1 1 320px;
+  min-width: 280px;
+}
+
+.contact-col-right {
   flex: 0 0 auto;
   padding-top: 8px;
 }
 
-.contact-col-right {
-  flex: 1 1 auto;
-  min-width: 280px;
+/* Contact cards: stacked, compact, horizontal layout each */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.contact-card-icon {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+}
+
+.contact-card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-card-label {
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+.contact-card-value {
+  font-size: 0.9rem;
 }
 
 @media (max-width: 640px) {
@@ -388,11 +429,9 @@
     flex-direction: column;
     gap: 32px;
   }
-  .contact-col-left {
-    order: 2; /* badge below contact info on mobile, feels more natural */
-  }
   .contact-col-right {
-    order: 1;
+    order: 2;
+    align-self: flex-start;
   }
 }
  
@@ -988,6 +1027,7 @@
 </script>
 
 <!-- CONTACT -->
+<!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="contact-inner">
     <div class="section-label" style="border-bottom:none;"><span class="section-label-text" style="color:rgba(255,255,255,.5);">Get in Touch</span></div>
@@ -996,28 +1036,29 @@
 
     <div class="contact-columns">
 
-      <!-- LEFT: LinkedIn badge -->
-     <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="gmnctg" data-version="v1">
-      <a class="badge-base__link LI-simple-link" href="https://bd.linkedin.com/in/gmnctg?trk=profile-badge"></a>
-     </div>
-
-      <!-- RIGHT: contact details -->
-      <div class="contact-col-right">
+      <!-- LEFT: contact cards, stacked -->
+      <div class="contact-col-left">
         <div class="contact-grid">
           <div class="contact-card">
             <div class="contact-card-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-            <div class="contact-card-label">Email</div>
-            <div class="contact-card-value"><a href="mailto:gmn.ctg@gmail.com">gmn.ctg@gmail.com</a></div>
+            <div class="contact-card-text">
+              <div class="contact-card-label">Email</div>
+              <div class="contact-card-value"><a href="mailto:gmn.ctg@gmail.com">gmn.ctg@gmail.com</a></div>
+            </div>
           </div>
           <div class="contact-card">
             <div class="contact-card-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
-            <div class="contact-card-label">Phone</div>
-            <div class="contact-card-value"><a href="tel:+8801717293250">+880 1717-293250</a></div>
+            <div class="contact-card-text">
+              <div class="contact-card-label">Phone</div>
+              <div class="contact-card-value"><a href="tel:+8801717293250">+880 1717-293250</a></div>
+            </div>
           </div>
           <div class="contact-card">
             <div class="contact-card-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-            <div class="contact-card-label">Address</div>
-            <div class="contact-card-value">Faculty of ECE, BAIUST<br>Cumilla, Bangladesh</div>
+            <div class="contact-card-text">
+              <div class="contact-card-label">Address</div>
+              <div class="contact-card-value">Faculty of ECE, BAIUST<br>Cumilla, Bangladesh</div>
+            </div>
           </div>
         </div>
 
@@ -1028,12 +1069,19 @@
           <a href="https://orcid.org/0000-0003-3375-0927" target="_blank" rel="noopener" class="social-icon" aria-label="ORCID" title="ORCID">
             <img src="assets/ORCID.webp" alt="ORCID">
           </a>
-          <a href="https://www.linkedin.com/in/gmnctg/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/golam-moktader-nayeem-d-eng-77669445/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
             <img src="assets/linkedin.webp" alt="LinkedIn">
           </a>
           <a href="https://www.researchgate.net/" target="_blank" rel="noopener" class="social-icon" aria-label="ResearchGate" title="ResearchGate">
             <img src="assets/rg.webp" alt="ResearchGate">
           </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: LinkedIn badge -->
+      <div class="contact-col-right">
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="gmnctg" data-version="v1">
+          <a class="badge-base__link LI-simple-link" href="https://bd.linkedin.com/in/gmnctg?trk=profile-badge">Golam Moktader Nayeem, PhD</a>
         </div>
       </div>
 
