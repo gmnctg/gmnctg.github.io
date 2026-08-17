@@ -362,248 +362,6 @@
   .social-icon img { width: 26px; height: 26px; object-fit: contain; display: block; }
   .social-icon:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--sand); }
 
- /* ======================================================
-   CONTACT SECTION — LINKEDIN PROFILE LAYOUT
-====================================================== */
-
-.contact-main-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.8fr);
-  gap: 48px;
-  align-items: stretch;
-  margin-top: 42px;
-}
-
-
-/* LEFT SIDE */
-.contact-details {
-  min-width: 0;
-}
-
-
-/*
-  If your old .contact-grid already uses
-  grid-template-columns: repeat(3, 1fr),
-  this keeps the three cards nicely aligned.
-*/
-.contact-main-grid .contact-grid {
-  margin-top: 0;
-  height: 100%;
-}
-
-
-/* ======================================================
-   LINKEDIN CARD AREA
-====================================================== */
-
-.linkedin-profile-area {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-
-  padding: 30px;
-
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  border-radius: 18px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,.07),
-      rgba(255,255,255,.025)
-    );
-
-  box-shadow:
-    0 18px 45px rgba(0, 0, 0, .16);
-
-  overflow: hidden;
-}
-
-
-/* subtle blue glow */
-.linkedin-profile-area::before {
-  content: "";
-
-  position: absolute;
-
-  width: 180px;
-  height: 180px;
-
-  right: -70px;
-  top: -80px;
-
-  border-radius: 50%;
-
-  background: rgba(10, 102, 194, .18);
-
-  filter: blur(40px);
-
-  pointer-events: none;
-}
-
-
-.linkedin-area-label {
-  position: relative;
-
-  margin-bottom: 10px;
-
-  color: #ffffff;
-
-  font-size: 18px;
-  font-weight: 600;
-
-  letter-spacing: -0.01em;
-}
-
-
-.linkedin-area-text {
-  position: relative;
-
-  margin: 0 0 24px;
-
-  max-width: 330px;
-
-  color: rgba(255,255,255,.58);
-
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-
-/* ======================================================
-   LINKEDIN PROFILE SUMMARY
-====================================================== */
-
-.linkedin-badge-wrapper {
-  position: relative;
-
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  flex: 1;
-
-  min-height: 260px;
-
-  padding: 8px 0;
-}
-
-
-/*
-  Prevent LinkedIn badge from overflowing
-  on smaller screens.
-*/
-.linkedin-badge-wrapper .LI-profile-badge {
-  max-width: 100%;
-}
-
-
-/* ======================================================
-   SOCIAL ICONS
-====================================================== */
-
-.contact-section .social-row {
-  margin-top: 48px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 14px;
-}
-
-
-/* ======================================================
-   TABLET
-====================================================== */
-
-@media (max-width: 1050px) {
-
-  .contact-main-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-
-  .linkedin-profile-area {
-    max-width: 620px;
-    width: 100%;
-
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
-  .linkedin-area-label,
-  .linkedin-area-text {
-    text-align: center;
-  }
-
-
-  .linkedin-area-text {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-}
-
-
-/* ======================================================
-   MOBILE
-====================================================== */
-
-@media (max-width: 700px) {
-
-  .contact-main-grid {
-    margin-top: 30px;
-  }
-
-
-  .contact-main-grid .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-
-  .linkedin-profile-area {
-    padding: 24px 18px;
-
-    border-radius: 15px;
-  }
-
-
-  .linkedin-badge-wrapper {
-    min-height: 230px;
-  }
-
-
-  .contact-section .social-row {
-    margin-top: 36px;
-  }
-
-}
-
-
-/* ======================================================
-   VERY SMALL MOBILE
-====================================================== */
-
-@media (max-width: 420px) {
-
-  .linkedin-profile-area {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-
-  .linkedin-badge-wrapper {
-    transform: scale(.94);
-    transform-origin: center center;
-  }
-
-}
-
 </style>
 </head>
 <body>
@@ -1196,247 +954,128 @@
 </script>
 
 <!-- CONTACT -->
+
 <section id="contact" class="contact-section">
+
   <div class="contact-inner">
 
-    <div class="section-label" style="border-bottom:none;">
-      <span
-        class="section-label-text"
-        style="color:rgba(255,255,255,.5);"
-      >
-        Get in Touch
-      </span>
-    </div>
+    <div class="section-label" style="border-bottom:none;"><span class="section-label-text" style="color:rgba(255,255,255,.5);">Get in Touch</span></div>
 
-    <h2 class="contact-heading">
-      Let's talk research, roles, or collaboration
-    </h2>
+    <h2 class="contact-heading">Let's talk research, roles, or collaboration</h2>
 
-    <p class="contact-sub">
-      Open to postdoctoral positions, faculty appointments, and
-      collaborations in bio-inspired optimisation and autonomous UAV systems.
-    </p>
-
-    <div class="availability-row">
-      <span class="availability-tag">Postdoctoral Positions</span>
-      <span class="availability-tag">Faculty Appointments</span>
-      <span class="availability-tag">Research Collaboration</span>
-    </div>
-
-    <div class="contact-actions">
-      <a href="mailto:gmn.ctg@gmail.com" class="btn btn-primary">Email Me</a>
-      <a href="https://www.linkedin.com/in/gmnctg/" target="_blank" rel="noopener" class="btn btn-ghost">Connect on LinkedIn</a>
-    </div>
+    <p class="contact-sub">Open to postdoctoral positions, faculty appointments, and collaborations in bio-inspired optimisation and autonomous UAV systems.</p>
 
 
-    <!-- CONTACT + LINKEDIN TWO-COLUMN AREA -->
-    <div class="contact-main-grid">
 
-      <!-- LEFT SIDE -->
-      <div class="contact-details">
+    <div class="contact-grid">
 
-        <div class="contact-grid">
+      <div class="contact-card">
 
-          <!-- EMAIL -->
-          <div class="contact-card">
-            <div class="contact-card-icon">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-            </div>
+        <div class="contact-card-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
 
-            <div class="contact-card-label">Email</div>
+        <div class="contact-card-label">Email</div>
 
-            <div class="contact-card-value">
-              <a href="mailto:gmn.ctg@gmail.com">
-                gmn.ctg@gmail.com
-              </a>
-            </div>
-          </div>
+        <div class="contact-card-value"><a href="mailto:gmn.ctg@gmail.com">gmn.ctg@gmail.com</a></div>
 
-
-          <!-- PHONE -->
-          <div class="contact-card">
-            <div class="contact-card-icon">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-            </div>
-
-            <div class="contact-card-label">Phone</div>
-
-            <div class="contact-card-value">
-              <a href="tel:+8801717293250">
-                +880 1717-293250
-              </a>
-            </div>
-          </div>
-
-
-          <!-- ADDRESS -->
-          <div class="contact-card">
-            <div class="contact-card-icon">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                />
-
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-            </div>
-
-            <div class="contact-card-label">Address</div>
-
-            <div class="contact-card-value">
-              Faculty of ECE, BAIUST<br>
-              Cumilla, Bangladesh
-            </div>
-          </div>
-
-        </div>
       </div>
 
+      <div class="contact-card">
 
-      <!-- RIGHT SIDE: LINKEDIN -->
-      <div class="linkedin-profile-area">
+        <div class="contact-card-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
 
-        <div class="linkedin-area-label">
-          Connect on LinkedIn
-        </div>
+        <div class="contact-card-label">Phone</div>
 
-        <p class="linkedin-area-text">
-          View my professional profile, experience, research interests,
-          and academic network.
-        </p>
+        <div class="contact-card-value"><a href="tel:+8801717293250">+880 1717-293250</a></div>
 
-        <div class="linkedin-badge-wrapper">
+      </div>
 
-          <div
-            class="badge-base LI-profile-badge"
-            data-locale="en_US"
-            data-size="medium"
-            data-theme="light"
-            data-type="VERTICAL"
-            data-vanity="gmnctg"
-            data-version="v1"
-          >
-            
-              class="badge-base__link LI-simple-link"
-              href="https://bd.linkedin.com/in/gmnctg?trk=profile-badge"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Golam Moktader Nayeem, PhD
-            </a>
-          </div>
+      <div class="contact-card">
 
-        </div>
+        <div class="contact-card-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+
+        <div class="contact-card-label">Address</div>
+
+        <div class="contact-card-value">Faculty of ECE, BAIUST<br>Cumilla, Bangladesh</div>
 
       </div>
 
     </div>
 
 
-    <!-- SOCIAL LINKS -->
+
     <div class="social-row">
 
-      <!-- GOOGLE SCHOLAR -->
-      
-        href="https://scholar.google.com/citations?user=vpEA8RwAAAAJ&hl=en"
-        target="_blank"
-        rel="noopener"
-        class="social-icon"
-        aria-label="Google Scholar"
-        title="Google Scholar"
-      >
-        <img
-          src="assets/googlescholar.webp"
-          alt="Google Scholar"
-        >
+      <a href="https://scholar.google.com/citations?user=vpEA8RwAAAAJ&hl=en" target="_blank" rel="noopener" class="social-icon" aria-label="Google Scholar" title="Google Scholar">
+
+        <img src="assets/googlescholar.webp" alt="Google Scholar">
+
       </a>
 
+      <a href="https://orcid.org/0000-0003-3375-0927" target="_blank" rel="noopener" class="social-icon" aria-label="ORCID" title="ORCID">
 
-      <!-- ORCID -->
-      
-        href="https://orcid.org/0000-0003-3375-0927"
-        target="_blank"
-        rel="noopener"
-        class="social-icon"
-        aria-label="ORCID"
-        title="ORCID"
-      >
-        <img
-          src="assets/ORCID.webp"
-          alt="ORCID"
-        >
+        <img src="assets/ORCID.webp" alt="ORCID">
+
       </a>
 
+      <a href="https://www.linkedin.com/in/golam-moktader-nayeem-d-eng-77669445/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
 
-      <!-- LINKEDIN -->
-      
-        href="https://www.linkedin.com/in/gmnctg/"
-        target="_blank"
-        rel="noopener"
-        class="social-icon"
-        aria-label="LinkedIn"
-        title="LinkedIn"
-      >
-        <img
-          src="assets/linkedin.webp"
-          alt="LinkedIn"
-        >
+        <img src="assets/linkedin.webp" alt="LinkedIn">
+
       </a>
 
+      <a href="https://www.researchgate.net/" target="_blank" rel="noopener" class="social-icon" aria-label="ResearchGate" title="ResearchGate">
 
-      <!-- RESEARCHGATE -->
-      
-        href="https://www.researchgate.net/"
-        target="_blank"
-        rel="noopener"
-        class="social-icon"
-        aria-label="ResearchGate"
-        title="ResearchGate"
-      >
-        <img
-          src="assets/rg.webp"
-          alt="ResearchGate"
-        >
+        <img src="assets/rg.webp" alt="ResearchGate">
+
       </a>
 
     </div>
 
   </div>
+
 </section>
 
+
+
+<footer>
+
+  <p>Dr. Golam Moktader Nayeem &nbsp;·&nbsp; Cumilla, Bangladesh</p>
+
+</footer>
+
+
+
+<script>
+
+  const toggle = document.getElementById('nav-toggle');
+
+  const links  = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+
+    a.addEventListener('click', e => {
+
+      const target = document.querySelector(a.getAttribute('href'));
+
+      if (target) {
+
+        e.preventDefault();
+
+        links.classList.remove('open');
+
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      }
+
+    });
+
+  });
+
+</script>
  
 </body>
 </html>
